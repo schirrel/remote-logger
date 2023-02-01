@@ -1,0 +1,135 @@
+html,
+body {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-auto-rows: 50px calc(100% - 100px) 50px;
+}
+
+main {
+  align-items: center;
+  display: flex;
+  background: #488ad2;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  min-height: calc(100% - 100px);
+  position: relative;
+}
+button {
+  pointer-events: all;
+  cursor: pointer;
+  font-weight: bold;
+
+  transition: color 300ms ease-in-out, background 300ms ease-in-out, border 300ms ease-in-out;
+  will-change: color, border, background;
+}
+
+#generateButton {
+  padding: 8px;
+  background: transparent;
+  border: 2px solid #1f4369;
+  border-radius: 16px 0 16px 0;
+  color: #333;
+  max-width: 200px;
+  font-size: 18px;
+}
+#generateButton:hover {
+  background: #1f4369;
+  color: white;
+}
+
+label {
+  display: block;
+}
+
+#copyButton {
+  padding: 12px;
+  border: none;
+  background: #dddddd;
+}
+input {
+  padding: 12px;
+  background: #dddddd;
+  width: 300px;
+  border: 2px solid transparent;
+  border-radius: 16px 0 16px 0;
+
+  transition: color 300ms ease-in-out, background 300ms ease-in-out, border 300ms ease-in-out;
+  will-change: color, border, background;
+}
+
+.input-content {
+  display: flex;
+  gap: 0;
+  position: relative;
+}
+
+#copyButton {
+  position: absolute;
+  right: 6px;
+  top: 2px;
+  background: transparent;
+}
+
+#copyButton:hover {
+  color: #488ad2;
+}
+#copyButton:hover + input {
+  background-color: #1f4369;
+  border: 2px solid #ffaf23;
+}
+
+#copyButton:active,
+#copyButton:active + input {
+  color: #ffaf23;
+}
+
+dialog#toast {
+  border-radius: 16px;
+  bottom: 30px;
+  box-shadow: 6px 6px 6px rgb(0 0 0 / 40%);
+  background: #5ee65e;
+  border: none;
+  font-weight: 700;
+}
+header,
+footer {
+  /* width: 100%; */
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+header {
+  background: #ffaf23;
+  display: flex;
+  padding-left: 8px;
+  font-weight: bold;
+  letter-spacing: 8px;
+}
+
+footer {
+  background: #1f4369;
+  justify-content: center;
+}
+
+a {
+  color: white;
+  border-bottom: 1px solid #ffaf23;
+  text-decoration: none;
+  padding: 0 4px;
+  transition: color 300ms ease-in-out, border 300ms ease-in-out,
+    padding 300ms ease-in-out;
+  will-change: color, border, padding;
+}
+
+a:hover {
+  color: #ffaf23;
+  border-color: white;
+  padding: 0 10px;
+}
