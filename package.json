@@ -1,0 +1,22 @@
+{
+  "name": "@schirrel/remote-logger",
+  "version": "1.0.0",
+  "description": "View remote console and error from anywhere",
+  "main": "/lib/remote-logger.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Fake Test\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/schirrel/remote-logger.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/schirrel/remote-logger/issues"
+  },
+  "homepage": "https://github.com/schirrel/remote-logger#readme"
+}
