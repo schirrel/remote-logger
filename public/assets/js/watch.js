@@ -2,7 +2,7 @@ const watchButton = document.querySelector("#watchButton");
 const loggerDevtools = document.querySelector("#loggerDevtools");
 //bl6yI38e8vzg2w9kvIcv
 const firebaseConfig = {
-  apiKey: "AIzaSyBbw1RTq9m98_xWtn2AonjJW8cQA_-VM5E",
+  // ADD apiKey
   authDomain: "schirrel.firebaseapp.com",
   databaseURL: "https://schirrel-default-rtdb.firebaseio.com",
   projectId: "schirrel",

@@ -4,7 +4,7 @@ const generateButton = document.querySelector("#generateButton");
 const loggerId = document.querySelector("#loggerId");
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBbw1RTq9m98_xWtn2AonjJW8cQA_-VM5E",
+  // add apikey
   authDomain: "schirrel.firebaseapp.com",
   databaseURL: "https://schirrel-default-rtdb.firebaseio.com",
   projectId: "schirrel",
