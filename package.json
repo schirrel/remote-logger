@@ -2,7 +2,7 @@
   "name": "@schirrel/remote-logger",
   "version": "1.0.0",
   "description": "View remote console and error from anywhere",
-  "main": "/lib/remote-logger.js",
+  "main": "/lib/remote-logger.min.js",
   "directories": {
     "lib": "lib"
   },
