@@ -23,18 +23,18 @@ Setup it on you app and watch the loggers at [Watcher](https://remote-logger.web
 ## CDN
 at HTML
 ```html
-<script src="https://cdn.jsdelivr.net/gh/schirrel/remote-logger@main/lib/remote-logger.js"/>
+<script src="https://cdn.jsdelivr.net/gh/schirrel/remote-logger@main/lib/remote-logger.min.js"/>
 ```
 
 at JavaScript
 ```js
-import "https://cdn.jsdelivr.net/gh/schirrel/remote-logger@main/lib/remote-logger.js"
+import "https://cdn.jsdelivr.net/gh/schirrel/remote-logger@main/lib/remote-logger.min.js"
 ```
 
 
 Installed
 ```js
-import "@schirrel/remote-logger.js"
+import "@schirrel/remote-logger"
 ```
 
 Now the `DebugRemoteLogger` is global and simple use as:
