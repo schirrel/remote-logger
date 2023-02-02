@@ -23,7 +23,7 @@ Setup it on you app and watch the loggers at [Watcher](https://remote-logger.web
 ## CDN
 at HTML
 ```html
-<script src="https://cdn.jsdelivr.net/gh/schirrel/remote-logger@main/lib/remote-logger.min.js"/>
+    <script src="https://cdn.jsdelivr.net/gh/schirrel/remote-logger@main/lib/remote-logger.min.js"> </script>
 ```
 
 at JavaScript
