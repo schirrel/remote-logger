@@ -29,6 +29,13 @@ const startWatcher = (id) => {
   db.collection("logger")
     .doc(id)
     .collection("messages")
+    .get((doc) => {
+      render(doc.docs);
+    });
+
+  db.collection("logger")
+    .doc(id)
+    .collection("messages")
     .onSnapshot((doc) => {
       render(doc.docs);
     });
