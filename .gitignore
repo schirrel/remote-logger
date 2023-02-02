@@ -1,1 +1,9 @@
-page/public/assets/js/firebase.js
+firebase.js
+firebase.json
+firestore.rules
+firestore.indexes.json
+
+**/firebase.js
+**/firebase.json
+**/firestore.rules
+**/firestore.indexes.json
