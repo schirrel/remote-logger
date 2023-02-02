@@ -1,0 +1,45 @@
+main {
+  justify-content: start;
+  padding-top: 20px;
+}
+
+#watchButton {
+  background-color: #1f4369;
+  border: 2px solid #ffaf23;
+  color: white;
+  border-radius: 0 16px;
+  margin-left: 8px;
+}
+
+section {
+  background-color: white;
+}
+
+ul {
+  list-style: none;
+  padding: 4px;
+  gap: 2px;
+  display: flex;
+  flex-direction: column;
+}
+
+.warn {
+  color: black;
+  background: gold;
+}
+.error {
+  color: white;
+  background: crimson;
+}
+.info {
+  color: black;
+  background: cornflowerblue;
+}
+.debug {
+  color: black;
+  background: lightseagreen;
+}
+
+li {
+  padding: 4px;
+}
