@@ -1,4 +1,6 @@
 # Remote Logger
+![RemoteLogger](https://user-images.githubusercontent.com/6757777/216325507-650b2213-55d9-4a2d-956e-94670ef7f522.gif)
+
 
 # Install
 
