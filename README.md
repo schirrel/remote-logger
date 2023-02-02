@@ -17,7 +17,7 @@ https://cdn.jsdelivr.net/gh/schirrel/remote-logger@main/lib/remote-logger.min.js
 ## How it works
 Generate your logger id at https://remote-logger.web.app/  
 
-Setup it on you app and watch the loggers at [Watcher](https://remote-logger.web.app/watch.html).
+Setup it on you app and watch the loggers at [Watcher](https://remote-logger.web.app/watch).
 
 ## Usage
 ## CDN
