@@ -11,7 +11,7 @@
 ```
 ## CDN
 ```sh
-https://cdn.jsdelivr.net/gh/schirrel/remote-logger@main/lib/remote-logger.min.js'
+https://cdn.jsdelivr.net/gh/schirrel/remote-logger@main/lib/remote-logger.min.js
 ```
 
 ## How it works
