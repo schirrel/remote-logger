@@ -1,4 +1,10 @@
 # Remote Logger
+See `console.log` and its _siblings_ as well as exceptions throw from another place.
+
+Initially develop to help on mobile debug of logs, mostly for Safari or iOS Browser. But you can use as you wish.
+
+Logs may live no more than 3/4 days at our database.
+
 ![RemoteLogger](https://user-images.githubusercontent.com/6757777/216325507-650b2213-55d9-4a2d-956e-94670ef7f522.gif)
 
 
