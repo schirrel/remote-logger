@@ -13,7 +13,7 @@ const render = (list) => {
       const log = data.args;
       return `
     <li class="${log.type}">
-      ${log.date}
+      <b>${log.date}</b>: 
       ${JSON.stringify(log.arguments)}
     </li>
     `;

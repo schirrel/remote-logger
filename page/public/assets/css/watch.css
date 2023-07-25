@@ -42,4 +42,8 @@ ul {
 
 li {
   padding: 4px;
+  border-bottom: 1px solid silver;
+  max-width: 100vw;
+  white-space: pre-line;
+  word-wrap: break-word;
 }
