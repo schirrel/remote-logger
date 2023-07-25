@@ -40,10 +40,32 @@ ul {
   background: lightseagreen;
 }
 
-li {
+.item {
   padding: 4px;
-  border-bottom: 1px solid silver;
-  max-width: 100vw;
+  max-width: fit-content;
   white-space: pre-line;
   word-wrap: break-word;
+}
+pre {
+  max-width: fit-content;
+  white-space: pre-line;
+  word-wrap: break-word;
+}
+table {
+  min-width: 100vw;
+  max-width: 100vw;
+  border-collapse: collapse;
+}
+
+
+td {
+  padding: 4px;
+  vertical-align: top;
+}
+th, td, tr {
+  border: 1px solid darkslategray;
+}
+
+th {
+  background-color: wheat;
 }

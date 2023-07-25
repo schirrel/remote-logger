@@ -1,10 +1,17 @@
 const watchButton = document.querySelector("#watchButton");
-const loggerDevtools = document.querySelector("#loggerDevtools");
+const table = document.querySelector("table");
+const tableTbody = document.querySelector("table tbody");
 
 const db = firebase.firestore();
-
-const render = (list) => {
-  const elements = list
+const getArgumentsFormatted = (args) => {
+  if (Object.keys(args) && Object.keys(args).length === 1) {
+    return args[0];
+  }
+  return JSON.stringify(args, null, 4);
+  ß;
+};
+const renderTable = (list) => {
+  const trs = list
     .map((doc) => doc.data())
     .sort((a, b) => {
       return new Date(b.args.date) - new Date(a.args.date);
@@ -12,32 +19,45 @@ const render = (list) => {
     .map((data) => {
       const log = data.args;
       return `
-    <li class="${log.type}">
-      <b>${log.date}</b>: 
-      ${JSON.stringify(log.arguments)}
-    </li>
+    <tr class="${log.type}">
+    <td class="date-col">
+    <code>${log.date}</code>
+    </td><td>
+    <small>${log.type} </small>
+    </td>
+    <td class="item">
+    <pre>
+    ${getArgumentsFormatted(log.arguments)}
+    </pre>
+    </td>
+    <td>
+    <pre>
+    ${JSON.stringify(data.info, null, 4)}
+    </pre>
+    </td>
+    </tr>
     `;
     })
     .join("");
 
-  loggerDevtools.innerHTML = `<ul>
-  ${elements}
-  </ul>`;
+  tableTbody.innerHTML = trs;
 };
 
 const startWatcher = (id) => {
+  tableTbody.innerHTML = ``;
+  table.removeAttribute("hidden");
   db.collection("logger")
     .doc(id)
     .collection("messages")
     .get((doc) => {
-      render(doc.docs);
+      renderTable(doc.docs);
     });
 
   db.collection("logger")
     .doc(id)
     .collection("messages")
     .onSnapshot((doc) => {
-      render(doc.docs);
+      renderTable(doc.docs);
     });
 };
 
