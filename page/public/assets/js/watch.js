@@ -1,7 +1,7 @@
 const watchButton = document.querySelector("#watchButton");
 const table = document.querySelector("table");
 const tableTbody = document.querySelector("table tbody");
-
+const current = [];
 const db = firebase.firestore();
 const getArgumentsFormatted = (args) => {
   if (Object.keys(args) && Object.keys(args).length === 1) {
@@ -17,6 +17,7 @@ const renderTable = (list) => {
       return new Date(b.args.date) - new Date(a.args.date);
     })
     .map((data) => {
+      current.push(data);
       const log = data.args;
       return `
     <tr class="${log.type}">
@@ -74,3 +75,19 @@ if (window.location.search) {
     startWatcher(id);
   }
 }
+
+window.addEventListener("keypress", ($event) => {
+  console.log($event);
+  if ($event.ctrlKey && $event.key === "d") {
+    const comd = confirm("Want to download the current log as json?");
+    if (comd === true) {
+      const dataStr =
+        "data:text/json;charset=utf-8," +
+        encodeURIComponent(JSON.stringify(current));
+      const dlAnchorElem = document.createElement("a");
+      dlAnchorElem.setAttribute("href", dataStr);
+      dlAnchorElem.setAttribute("download", `remote-logger-${loggerId.valueß}.json`);
+      dlAnchorElem.click();
+    }
+  }
+});
