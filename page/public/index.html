@@ -7,9 +7,10 @@
     <title>DebugRemoteLogger</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/progress.css" />
+    <script src="./assets/js/components.js"></script>
   </head>
   <body>
-    <header>Remote Logger</header>
+    <rl-header></rl-header>
     <main>
       <button id="generateButton" type="click">Generate Logger ID</button>
 
@@ -18,9 +19,8 @@
           Copy
         </button>
         <input id="loggerId" value="" readonly type="text" />
-
       </div>
-      <a href="watch"> Watch your logs </a>
+      <rl-link href="watch">Watch your logs </rl-link>
       <dialog id="loading">
         <progress
           indeterminate
@@ -32,7 +32,7 @@
       <dialog id="toast">ID copied</dialog>
     </main>
 
-    <footer><a href="https://github.com/schirrel/remote-logger/tree/main">SDK</a></footer>
+    <rl-footer></rl-footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-analytics.js"></script>

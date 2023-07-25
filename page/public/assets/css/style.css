@@ -26,7 +26,8 @@ button {
   cursor: pointer;
   font-weight: bold;
 
-  transition: color 300ms ease-in-out, background 300ms ease-in-out, border 300ms ease-in-out;
+  transition: color 300ms ease-in-out, background 300ms ease-in-out,
+    border 300ms ease-in-out;
   will-change: color, border, background;
 }
 
@@ -60,7 +61,8 @@ input {
   border: 2px solid transparent;
   border-radius: 16px 0 16px 0;
 
-  transition: color 300ms ease-in-out, background 300ms ease-in-out, border 300ms ease-in-out;
+  transition: color 300ms ease-in-out, background 300ms ease-in-out,
+    border 300ms ease-in-out;
   will-change: color, border, background;
 }
 
@@ -97,39 +99,4 @@ dialog#toast {
   background: #5ee65e;
   border: none;
   font-weight: 700;
-}
-header,
-footer {
-  /* width: 100%; */
-  height: 50px;
-  display: flex;
-  align-items: center;
-}
-header {
-  background: #ffaf23;
-  display: flex;
-  padding-left: 8px;
-  font-weight: bold;
-  letter-spacing: 8px;
-}
-
-footer {
-  background: #1f4369;
-  justify-content: center;
-}
-
-a {
-  color: white;
-  border-bottom: 1px solid #ffaf23;
-  text-decoration: none;
-  padding: 0 4px;
-  transition: color 300ms ease-in-out, border 300ms ease-in-out,
-    padding 300ms ease-in-out;
-  will-change: color, border, padding;
-}
-
-a:hover {
-  color: #ffaf23;
-  border-color: white;
-  padding: 0 10px;
 }

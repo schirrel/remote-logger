@@ -45,3 +45,12 @@ watchButton.addEventListener("click", () => {
   if (loggerId.value && loggerId.value.length >= 20)
     startWatcher(loggerId.value);
 });
+
+if (window.location.search) {
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
+  if (id) {
+    loggerId.value = id;
+    startWatcher(id);
+  }
+}

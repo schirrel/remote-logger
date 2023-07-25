@@ -7,9 +7,10 @@
     <title>DebugRemoteLogger</title>
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/watch.css" />
+    <script src="../assets/js/components.js"></script>
   </head>
   <body>
-    <header>Remote Logger</header>
+    <rl-header></rl-header>
     <main>
       <div class="input-content">
         <input name="loggerId" id="loggerId" type="text" />
@@ -17,16 +18,14 @@
         <button id="watchButton" type="click">Watch</button>
       </div>
 
-      <section id="loggerDevtools">
-
-      </section>
+      <section id="loggerDevtools"></section>
     </main>
 
-    <footer><a href="https://github.com/schirrel/remote-logger/tree/main">SDK</a></footer>
+    <rl-footer show-new-log></rl-footer>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
-    
+
     <script src="../assets/js/firebase.js"></script>
     <script src="../assets/js/watch.js"></script>
   </body>
