@@ -54,7 +54,6 @@ class RLLink extends HTMLElement {
     this.attachShadow({ mode: "open" });
     const style = document.createElement("style");
     const anchorLink = document.createElement("a");
-    console.log(this.getAttribute("href"));
     anchorLink.href = this.getAttribute("href");
     anchorLink.innerHTML = "<slot/>";
     style.textContent = `
@@ -87,20 +86,29 @@ class RLFooter extends HTMLElement {
     this.attachShadow({ mode: "open" });
     const wrapper = document.createElement("footer");
 
-    const howToUseLink = wrapper.appendChild(document.createElement("rl-link"));
-    howToUseLink.href =
-      "https://github.com/schirrel/remote-logger/tree/main#usage";
-    howToUseLink.textContent = "Docs";
+    const howToUseLink = document.createElement("rl-link");
 
-    const sdkLink = wrapper.appendChild(document.createElement("rl-link"));
-    sdkLink.href =
-      "https://github.com/schirrel/remote-logger/blob/main/lib/remote-logger.min.js";
+    howToUseLink.setAttribute(
+      "href",
+      "https://github.com/schirrel/remote-logger/tree/main#usage"
+    );
+    howToUseLink.textContent = "Docs";
+    wrapper.appendChild(howToUseLink);
+
+    const sdkLink = document.createElement("rl-link");
+    sdkLink.setAttribute(
+      "href",
+      "https://github.com/schirrel/remote-logger/blob/main/lib/remote-logger.min.js"
+    );
     sdkLink.textContent = "Download SDK";
+    wrapper.appendChild(sdkLink);
 
     if (this.hasAttribute("show-new-log")) {
-      const newLogLink = wrapper.appendChild(document.createElement("rl-link"));
-      newLogLink.href = "https://remote-logger.web.app";
+      const newLogLink = document.createElement("rl-link");
+      newLogLink.href = "";
+      sdkLink.setAttribute("href", "https://remote-logger.web.app");
       newLogLink.textContent = "Generate New Id";
+      wrapper.appendChild(newLogLink);
     }
     const style = document.createElement("style");
     style.textContent = `
