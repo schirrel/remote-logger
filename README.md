@@ -27,26 +27,33 @@ Generate your logger id at https://remote-logger.web.app/
 
 Setup it on you app and watch the loggers at [Watcher](https://remote-logger.web.app/watch).
 
+## Instalation
+
 ## Usage
-## CDN
-at HTML
-```html
-    <script src="https://cdn.jsdelivr.net/gh/schirrel/remote-logger@main/lib/remote-logger.min.js"> </script>
-```
 
-at JavaScript
+If installed with npm you need to import
 ```js
-import "https://cdn.jsdelivr.net/gh/schirrel/remote-logger@main/lib/remote-logger.min.js"
+import '@schirrel/remote-logger/lib/remote-logger';
 ```
 
 
-Installed
+The `DebugRemoteLogger` function is available globally.
+
 ```js
-import "@schirrel/remote-logger"
+DebugRemoteLogger(id: string , options?: {only: []})
 ```
+- `id` string is required
+- `options` object is options, and currenty has only a single option:
+    - `only` array of string that should match console levels from `Object.keys(console)`:
+        -  'debug', 'error', 'info', 'log', 'warn', 'dir', 'dirxml', 'table', 'trace', 'group', 'groupCollapsed', 'groupEnd', 'clear', 'count', 'countReset', 'assert', 'profile', 'profileEnd', 'time', 'timeLog', 'timeEnd', 'timeStamp', 'context', 'createTask', 'memory']
 
-Now the `DebugRemoteLogger` is global and simple use as:
+
 ```js
 DebugRemoteLogger("your-generated-id")
+// with options
+DebugRemoteLogger("your-generated-id", { only: ['info'])
+DebugRemoteLogger("your-generated-id", { only: ['warn', 'error'])
+DebugRemoteLogger("your-generated-id", { only: ['debug'])
+DebugRemoteLogger("your-generated-id", { only: ['error'])
 ```
 
