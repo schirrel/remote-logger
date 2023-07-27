@@ -7,3 +7,6 @@ firestore.indexes.json
 **/firebase.json
 **/firestore.rules
 **/firestore.indexes.json
+
+**/.firebase
+node_modules
